@@ -26,7 +26,7 @@ const Footer = () => {
       state: {
         initialFilters: {
           priceRange: [0, 100000],
-          categories: [category.toLowerCase()],
+          categories: [category],
           experienceTypes: {
             romantic: false,
             adventurous: false,

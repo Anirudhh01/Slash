@@ -140,7 +140,8 @@ const AllExperiences = () => {
   const activeFiltersCount =
     (activeFilters?.categories?.length || 0) +
     (activeFilters?.location && activeFilters.location !== 'any' ? 1 : 0) +
-    (activeFilters?.priceRange ? 1 : 0);
+    (activeFilters?.priceRange && 
+     (activeFilters.priceRange[0] !== 0 || activeFilters.priceRange[1] !== 100000) ? 1 : 0);
 
   return (
     <div className="min-h-screen flex flex-col">
