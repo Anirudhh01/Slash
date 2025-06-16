@@ -78,7 +78,7 @@ const ExperienceCard = ({ experience, featured = false, onWishlistChange }: Expe
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative w-[341.34px] h-[256px] overflow-hidden rounded-xl">
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
         {/* Image */}
         <img
           src={experience.imageUrl}

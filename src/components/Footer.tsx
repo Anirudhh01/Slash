@@ -41,6 +41,16 @@ const Footer = () => {
     });
   };
 
+  const handleAllExperiencesClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    scrollToTop();
+    navigate('/experiences', {
+      state: {
+        initialFilters: null
+      }
+    });
+  };
+
   const footerLinks = [
     {
       title: "Experiences",
@@ -157,7 +167,7 @@ const Footer = () => {
                       <li key={link.name}>
                         <Link 
                           to={link.href}
-                          onClick={scrollToTop}
+                          onClick={handleAllExperiencesClick}
                           className="text-muted-foreground hover:text-foreground transition-colors"
                         >
                           {link.name}
